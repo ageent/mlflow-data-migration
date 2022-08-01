@@ -11,10 +11,10 @@ from mlflow.entities import SourceType
 
 
 def migrate_data(config_path="conf/db.json", root_log_dir="./mlruns", queries_file=None,
-                 start_query_num=None, init_tables=True, clean_all_tables=False):
+                 init_tables=True, clean_all_tables=False):
     migrator = DataMigrator(config_path)
     migrator.write_insert_queries(root_log_dir, queries_file)
-    migrator.send_queries(start_query_num, init_tables, clean_all_tables)
+    migrator.send_queries(init_tables=init_tables, clean_all_tables=clean_all_tables)
 
 
 class DataMigrator:
