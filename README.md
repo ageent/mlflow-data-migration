@@ -1,6 +1,8 @@
 # MLflow migration data
 Migration of  mlflow experiments and runs metadata from the file system to the database.
-Use utility **DataMigrator.migrate_data**.
+
+Use utility **DataMigrator.migrate_data** for migrate experiments, runs, metrics, params, tags (of runs).
+
 Parameters:
 * config_path="conf/db.json"
 
